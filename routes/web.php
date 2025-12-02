@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\RoleController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,6 +19,9 @@ Route::resource('/employees', EmployeeController::class);
 
 //handle department routes
 Route::resource('/departments', DepartmentController::class);
+
+//handle role routes
+Route::resource('/roles', RoleController::class);
 
 //handle task routes
 Route::resource('/tasks', TaskController::class);
